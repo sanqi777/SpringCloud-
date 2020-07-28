@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
+
 /**
  * Created by 三七 on 2020/7/16.
  */
@@ -25,6 +26,7 @@ public class PaymentController {
     @PostMapping(value = "/payment/create")
     public CommonResult create( @RequestBody Payment payment)
     {
+
         int result = paymentService.create(payment);
         log.info("*****插入结果："+result);
 
